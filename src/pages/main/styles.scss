@@ -1,0 +1,304 @@
+@import '../../variables';
+
+.cylin{
+    position: relative;
+    width: 226px;
+    height: 346px;
+    &:after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        mask: url("~/assets/img/bounce1.svg");
+        mask-size: cover;
+        background: rgba(0,0,0,.5);
+        // filter: invert(1);
+    }
+}
+
+.header{
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+
+    &:after{
+        content: "";
+        background: url("~/assets/img/banner.svg") bottom center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        // opacity: .5;
+    }
+    .container{
+        position: relative;
+        z-index: 1;
+        color: #000;
+        .mainText{
+            position: absolute;
+            top: 130px;
+            right: 0;
+            left: 0;
+            text-align: center;
+            font-size: 230px;
+        }
+        .subText{
+            position: absolute;
+            font-family: secundaryfont;
+            top: 350px;
+            right: 0;
+            left: 0;
+            text-align: center;
+            font-size: 50px;
+            opacity: .5;
+        }
+    }
+
+    .flow{
+        position: relative;
+        z-index: -1;
+        .cylin{
+            position: absolute;
+            width: 226px;
+            height: 346px;
+            &.first::after{
+                background: linear-gradient(-169deg, adjust-hue(map-get($colors,default),-10%), map-get($colors,default));
+            }
+            &.second::after{
+                background: linear-gradient(-169deg, map-get($colors,default), adjust-hue(map-get($colors,default),-10%));
+            }
+        }
+
+        &.left,&.right{top: -116px;}
+
+        &.left{
+            // position: absolute;
+            left: 0;
+            .cylin.first{
+                position: absolute;
+                top: 117px !important;
+                left: -62px !important;
+            }
+            .cylin.second{
+                top: 223px !important;
+                left: -63px !important;
+            }
+        }
+        &.right{
+            // position: absolute;
+            right: 0;
+            .cylin.first{
+                position: absolute;
+                top: 272px !important;
+                right: -106px !important;
+            }
+            .cylin.second{
+                top: 335px !important;
+                right: -66px !important;
+            }
+        }
+    }
+}
+
+
+.polvinho{
+    position: relative;
+    height: 270px;
+    img{
+        width: 440px;
+        position: absolute;
+        top: -110%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        filter: drop-shadow(16px 16px 23px rgba(0,0,0,.2));
+    }
+}
+
+.teams{
+    text-align: center;
+    .icon{
+        position: relative;
+        
+        &.icon-1{
+            &:after{background: map-get($colors, pink);}
+            img{width: 167px; margin-top: -19px;}
+        } 
+        &.icon-2{
+            &:after{background: map-get($colors, purple2)}
+            img{height: 156px;}
+        }
+        &.icon-3{
+            &:after{background: map-get($colors, blue)}
+            img{width: 156px; margin-top: 1px;}
+        }
+        &.icon-4{
+            &:after{background: map-get($colors, green2)}
+            img{width: 165px;}
+        }
+        &.icon-5{
+            &:after{background: map-get($colors, orange)}
+            img{width: 173px;}
+        }
+
+
+
+
+        &:after{
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: -26px;
+            left: -5px;
+            right: 0;
+            margin: 0 auto;
+            mask: url("~/assets/img/bounce2.svg");
+            mask-size: cover;
+            background: rgba(map-get($colors, purple2),.2);
+            height: 117px;
+            width: 97px;
+            opacity: .1;
+        }
+    }
+    h3{
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    p{
+        text-align: left;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    .header .flow.left{left: -20%;}
+    .header .flow.right{right: -10%;}
+    .polvinho img {width: 80% !important;}
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767px) {
+    .header .container .mainText{
+        top: 160px;
+        font-size: 120px;
+    }
+    .header .container .subText {
+        top: 290px;
+        font-size: 40px;
+    }
+    .header .flow.left{left: -30%;}
+    .header .flow.right{right: -30%;}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) {
+    .header .flow.left{left: -15%;}
+    .header .flow.right{right: -12%;}
+    .polvinho img {
+        top: -60%;
+        width: 40%;
+        z-index: 2;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px){
+    .header{height: 1000px;}
+    .header .flow.left{left: -12%;}
+    .header .flow.right{right: -8%;}
+
+    .header .container .mainText {
+        top: 200px;
+        font-size: 346px;
+    }
+    .header .container .subText {
+        top: 534px;
+        font-size: 74px;
+    }
+}
