@@ -1,0 +1,148 @@
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px){
+    .header{height: 1000px;}
+    .header .flow.left{left: -12%;}
+    .header .flow.right{right: -8%;}
+
+    .header .container .mainText {
+        top: 200px;
+        font-size: 346px;
+    }
+    .header .container .subText {
+        top: 534px;
+        font-size: 74px;
+    }
+
+    .inner{
+        .header{
+            
+        }
+        footer{
+            padding-top: 10%;
+        }
+    }
+}
+
+
+
+
+
+
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 991px) {
+    .header .flow.left{left: -15%;}
+    .header .flow.right{right: -12%;}
+    .polvinho img {
+        top: -60%;
+        width: 40%;
+        z-index: 2;
+    }
+    //footer
+    footer{padding-top: 20%;}
+
+    .inner{
+        .header{
+            
+        }
+        footer{
+            padding-top: 90px;
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 767px) {
+    .header .container .mainText{
+        top: 160px;
+        font-size: 120px;
+    }
+    .header .container .subText {
+        top: 290px;
+        font-size: 40px;
+    }
+    .header .flow.left{left: -30%;}
+    .header .flow.right{right: -30%;}
+
+    //footer
+    footer{padding-top: 25%;}
+
+
+    .inner{
+        .header{
+            .crop{
+                bottom: -14%;
+            }
+        }
+        footer{
+            padding-top: 60px;
+        }
+    }
+}
+
+
+
+
+
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575px) {
+    .header .flow.left{left: -20%;}
+    .header .flow.right{right: -10%;}
+    .polvinho img {width: 80% !important;}
+
+    .boxes-link .col{margin-bottom: 15px;}
+
+
+    footer{
+        // height: 100%;
+        padding-top: 40%;
+
+        .year{margin-bottom: 15px;}
+        [class*="col"] .list-unstyled{
+            li:first-child{
+                display: block;
+                margin: 0;
+            }
+            a{
+                display: inline-block;
+                margin-left: 15px;
+            }
+        }
+
+        .follow-us{
+            ul{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                li:first-child{
+                    display: inline-block;
+                    width: 100%;}
+                a{
+                    display: inline-block;
+                    flex: 1;
+                    flex-basis: 100%;
+                }
+            }
+        }
+    }
+
+    .inner{
+        .header{
+            .crop{
+                bottom: -7%;
+            }
+        }
+        footer{
+
+        }
+    }
+}

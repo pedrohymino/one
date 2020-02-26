@@ -1,33 +1,18 @@
 {
-  "name": "site",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "0.18.0",
-    "bootstrap": "4.3.1",
-    "jquery": "3.3.1",
-    "node-sass": "4.11.0",
-    "popper.js": "1.15.0",
-    "react": "16.8.5",
-    "react-dom": "16.8.5",
-    "react-router-dom": "5.0.0",
-    "react-scripts": "2.1.8"
-  },
-  "homepage": "http://onevancouver.ca/",
+  "name": "onevancouver",
+  "version": "1.0.0",
+  "description": "Website project",
+  "main": "index.js",
   "scripts": {
-    "predeploy": "npm run build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-sass": "node-sass --include-path scss assets/sass/main.scss assets/css/bundle.css",
+    "watch": "nodemon -e scss -x \"npm run compile-sass\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "author": "Pedro Hymino",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "4.11.0",
+    "nodemon": "1.18.11"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "dependencies": {}
 }
