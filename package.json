@@ -11,7 +11,7 @@
   "author": "Pedro Hymino",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "4.11.0",
+    "node-sass": "7.0.0",
     "nodemon": "1.18.11"
   },
   "dependencies": {}
